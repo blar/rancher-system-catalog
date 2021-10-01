@@ -35,7 +35,7 @@ services:
     - NET_ADMIN
     image: {{$metadataImage}}
     network_mode: bridge
-    command: start.sh rancher-metadata -reload-interval-limit=${RELOAD_INTERVAL_LIMIT} -subscribe
+    command: rancher-metadata -reload-interval-limit=${RELOAD_INTERVAL_LIMIT} -subscribe
     labels:
       io.rancher.sidekicks: dns
       io.rancher.container.create_agent: 'true'
